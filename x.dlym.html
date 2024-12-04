@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="UTF-8">
+		<script src="login.js"> </script>
+		<title>登录页面</title>
+	</head>
+	<body>
+		<div class="login-container">
+			<div class="logo">
+				<img src="logo1.png">
+			</div>
+			<div>
+				<span class="login_p">Username(Teacher No./Student No.)</span>
+				<input type="text" id="username" class="input-field">
+			</div>
+			<div>
+				<span class="login_p">Password(Same as URP platform)</span>
+				<input type="password" id="password" class="input-field">
+			</div>
+			<div id="errorMessage" style="color:red;"></div>
+			<button id="login" class="login-button" onclick="validateForm()">Login</button>
+		</div>
+
+	</body>
+</html>
+<style>
+	body,
+	html {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		font-family: Arial;
+		background-image: url('https://login.cityu.edu.mo/cas/images/background.png');
+		background-position: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.login-container {
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		text-align: center;
+		width: 300px;
+	}
+
+	.logo {
+		margin-bottom: 20px;
+	}
+
+	.logo img {
+		width: 280px;
+		height: auto;
+	}
+
+	.school-name {
+		margin-bottom: 20px;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	.input-field {
+		margin-bottom: 15px;
+		width: calc(100% - 22px);
+		padding: 10px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		background-color: #ccc
+	}
+
+	.login-button {
+		width: 100%;
+		padding: 10px;
+		background-color: hsl(171, 84%, 40%);
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+	}
+
+	.login-button:hover {
+		background-color: #45a049;
+	}
+
+	.login_p {
+		color: hwb(0 33% 66% / 0.566);
+		font-size: 15px;
+		position: relative;
+		margin: 2px 0px;
+		display: block;
+		left: -10px;
+	}
+</style>
